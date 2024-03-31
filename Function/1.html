@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Functions and Type of Functios
+
+        // suppose we want to finde area of rectangle then we need of length and breadth
+        
+        //  Step -1 : According to Simple method 
+
+        const L1=10;
+        const B1=6;
+        const Area1=(L1*B1);
+        console.log(`Area For Length ${L1} and Breadth ${B1} is ${Area1}`);
+
+
+        const L2=8;
+        const B2=6;
+        const Area2=(L2*B2);
+        console.log(`Area For Length ${L2} and Breadth ${B2} is ${Area2}`);
+
+        // In Above We doing repeatedley this thing
+        //  const Area2=(L2*B2);
+        // console.log(`Area For Length ${L2} and Breadth ${B2} is ${Area2}`)
+
+
+        // But we need to use Function beacause of the function provided reusable block of code 
+
+        // Stp 2: According To Function
+
+
+        function calculateArea(Length,Breadth) {
+            const Area=(Length*Breadth);
+            console.log(`Area For Length ${Length} and Breadth ${Breadth} is ${Area}`);
+        }
+
+
+        calculateArea(2,5)
+        calculateArea(3,5)
+        calculateArea(4,5)
+        calculateArea(5,5)
+        calculateArea(6,5)
+        calculateArea(7,5)
+
+
+         
+       
+
+    </script>
+
+    
+</body>
+</html>

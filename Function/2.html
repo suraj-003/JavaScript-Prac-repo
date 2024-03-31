@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Assignment NO 24
+        // Create a function that is calculate the area of circle
+
+        function calculateArea(Radius) {
+            const Area= 3.141*Radius*Radius;
+            // console.log(`Area Of Circle is ${Area}`)
+            return Area;
+        }
+
+        const Area1 =calculateArea(6)
+        console.log(`Area of 1st circle  is ${Area1}`)
+
+        const Area2=calculateArea(3)
+        console.log(`Area of 2nd circle is ${Area2}`)
+
+
+        // Argument and return
+
+        function calculateSquare(Number) {
+            return Number*Number;
+           
+        }
+
+        const  Square= calculateSquare(5);
+        console.log(`Square is ${Square}`)
+
+
+
+        // No Argument But Return
+
+        function getMessage() {
+            return ("Hello JavaScript, You are Amazing")
+        }
+
+        const Message= getMessage();
+        console.log(Message)
+
+        //Argument but not return
+
+        function remainder(N1,N2) {
+            const Remainder=(N1/N2)
+            console.log(Remainder);
+        }
+         remainder(10,50)
+
+        // No Argument No Return
+
+        function getInfo() {
+            console.log("Assignment 24 Completed")
+        }
+        getInfo();
+          
+       
+        
+    </script>
+</body>
+</html>
