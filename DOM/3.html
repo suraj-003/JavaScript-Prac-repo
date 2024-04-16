@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: rosybrown;
+        }
+        h1{
+            color:brown;
+            text-align: center;
+            border: 1px solid black;
+            background-color: lightgrey;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:xx-large;
+            border-radius: 15px;
+           
+        }
+        input{
+            width: 150px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           border-radius: 5px;
+           
+           border: 1px solid black;
+           height: 25px;
+        }
+        .div-1{
+           margin-left: 580px;
+           border-radius: 15px;
+           border: 1px solid black;
+           padding: 30px;
+           width: 300px;
+           background-color: blanchedalmond;
+        }
+        @media screen and (max-width:600px) {
+            .div-1{
+                margin-left: 30px;
+            }
+        }
+        b{
+            margin-left: 30px;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 100px;
+            border-radius: 10px;
+            padding: 5px;
+            width: 120px;
+            background-color:coral;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: black;
+            font-weight: bold;
+            border: 1px solid black;
+            font-size: larger;
+            cursor: pointer;
+            
+        }
+        button:hover{
+            background-color: yellow;
+        }
+
+       
+
+        @media screen and (max-width:600px) {
+            .div-2{
+                height: 30px;
+
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <h1>BMI Calculator</h1>
+
+    <div class="div-1">
+<b>Weight</b> : <input type="text"  id="wei" placeholder="                                kg">
+      <br><br>
+       <b>Height</b> : <input type="text"   id="hei" placeholder="                               m"> <br>
+      <br><br>
+      <hr>  
+     <button type="button" onclick="Calculate() " > Calculate</button>
+    <button type="button" onclick="reset()"> Reset</button>
+    
+    </div>
+
+
+    <div class="div-2" id="Bmi">
+
+    </div><br><br>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+
+        <div style="border: 1px solid black; width: 300px; padding: 20px; border-radius: 15px; background-color: lightgrey;" id="card-1"><h3>Underweighted</h3>Risk: <br><ul><li>Digestion Problem</li>
+        <li>Respiratory Problems</li>
+        <li>Low immunity</li>
+        </ul></div>
+
+        <div style="border: 1px solid black; width: 300px; padding: 20px; border-radius: 15px ;background-color: lightgrey;" id="card-2"><h3>Normal</h3>Benefits: <br><ul><li>High Energy than Others</li>
+            <li>Low Risk For Viral Infection</li>
+            <li>Healty</li>
+            </ul></div>
+
+            <div style="border: 1px solid black; width: 300px; padding: 20px; border-radius: 15px; background-color: lightgrey;" id="card-3"><h3>Overweighted</h3>Risk: <br><ul><li>Diabeties</li>
+                <li>High Blood Pressure</li>
+                <li>Depression</li>
+                </ul></div>
+    </div>
+
+
+    <script>
+
+        function Calculate() {
+          const a= document.getElementById("hei");
+          const b= document.getElementById("wei");
+
+          const c=parseInt(a.value);
+          const d =parseInt(b.value)*parseInt(b.value);
+
+          const sum= d/c;
+
+          
+          const ANS=document.getElementById("Bmi")
+
+          ANS.innerText=`Answer ${sum}`;
+          ANS.style.textAlign="center";
+          ANS.style.fontSize="20px";
+          ANS.style.color="black";
+          ANS.style.fontWeight="bold";
+          ANS.style.borderRadius="10px"
+          ANS.style.background="yellow"
+        //   ANS.style.width="30%";
+        //   ANS.style.height="90px";
+          ANS.style.marginLeft="auto";
+          ANS.style.marginRight="auto";
+          ANS.style.marginTop="20px"
+          ANS.style.border="1px solid black"
+
+            if (b.value=="") {
+                alert("Please Enter weight");
+
+            }
+            else if(a.value=="") {
+                alert("Please Enter height")
+            }
+          else if (sum<18.5) {
+            alert("You are Underweighted");
+            document.getElementById("card-1").style.background="lightgreen"
+          }
+          else if(sum >= 18.6 && sum < 24.9) {
+          alert("You are Normal");
+          document.getElementById("card-2").style.background="lightgreen"
+        
+          }
+          else  {
+            alert("you overweighted")
+            document.getElementById("card-3").style.background="lightgreen"
+          }
+
+
+            
+          
+        }
+
+        function reset() {
+            const a= document.getElementById("hei");
+          const b= document.getElementById("wei");
+          const ANS=document.getElementById("Bmi")
+          a.value="";
+          b.value="";
+          ANS.innerText="";
+          ANS.style.textAlign="";
+          ANS.style.fontSize="";
+          ANS.style.color="";
+          ANS.style.fontWeight="";
+          ANS.style.borderRadius=""
+          ANS.style.background=""
+          ANS.style.width="";
+          ANS.style.height="";
+          ANS.style.marginLeft="";
+          ANS.style.marginRight="";
+          ANS.style.marginTop=""
+          ANS.style.border=""
+        }
+    </script>
+</body>
+</html>

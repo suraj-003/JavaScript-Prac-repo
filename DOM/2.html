@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color:lightsalmon;
+        }
+        .div{
+            height: 150px;
+            font-size: larger;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            background-color: lightcoral;
+            width: 500px;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right:auto;
+            padding: 5px;
+            border: 1px solid darkred;
+        }
+
+        @media screen and (max-width:440px ){
+            .div{
+                width: auto;
+            }
+        }
+
+        @media screen and (max-width:797px ){
+            .div{
+                width: auto;
+            }
+           
+        }
+
+       
+       
+        .div-2{
+            font-size: larger;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            margin-left: 670px;
+            width: 200px;
+            cursor: pointer;
+           
+            border-radius: 20px;
+            
+        }
+        h1{
+            text-align: center;
+            background-color: lightgrey;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 2px;
+            padding-top: 5px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input{
+            height:auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 20px;
+            width:90%;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width:440px ){
+            input{
+            width: 90%;
+            }
+        }
+        @media screen and (max-width:358px ) {
+            .div-2{
+                margin-left: -28px;
+                margin-right: auto;
+                width: 10px;
+               
+            }
+        }
+        @media screen and (max-width:797px ){
+            .div-2{
+                margin-left: 100px;
+                height: 35px;
+            }
+        }
+
+        @media screen and (max-width:1164px ){
+            .div-2{
+                margin-left: 490px;
+               
+            }
+
+        }
+       
+    </style>
+</head>
+<body>
+
+    <h1>Additon Application</h1>
+   <div class="div">
+
+   
+    <input type="number" onclick="calculate()"  placeholder="Enter Number 1" id="num1">
+    
+   
+    <input type="number" onclick="calculate()"  placeholder="Enter Number 2" id="num2">
+
+    <p id="ans" >
+        Answer:
+    </p>
+
+</div>
+
+
+<button type="button" class="div-2" onclick="calculate()"> Calculate</button>
+<button type="button" class="div-2 " onclick="reset()" > Reset </button>
+
+
+</div>
+
+<script>
+   
+       function calculate() {
+        const input1=document.getElementById("num1");
+        const input2=document.getElementById("num2");
+
+      const sum=parseInt( input1.value) * parseInt( input2.value);
+      
+      const ansElement=document.getElementById("ans");
+
+      ansElement.innerText= ` Answer :${sum}`;
+
+       }
+
+       function reset() {
+        const input1=document.getElementById("num1");
+        const input2=document.getElementById("num2");
+        const ansElement=document.getElementById("ans");
+        input1.value="";
+        input2.value="";
+        ansElement.innerText="";
+
+
+
+       }
+     
+   
+
+
+    
+</script>
+</body>
+</html>
