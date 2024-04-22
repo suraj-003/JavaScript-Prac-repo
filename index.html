@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    }
+
+    h1 {
+
+        color: black;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: 40px;
+    }
+    button{
+        height: 50px;
+        width: 150px;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        background-color: lightyellow;
+        cursor: pointer;
+        margin-left: 685px;
+       
+    }
+    .div-container{
+
+        background-color: white;
+        width: 500px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
+    @media screen and (max-width:600px) {
+        .div-container{
+            width: 80%;;
+        }
+        button{
+            margin-left: 45px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Change Images Using Javascript -->
+
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOCnXy20O1p6UMERjys2tk-lpzJneJpxumroga6WtWoQ&s" onclick="changeImg()" id="appleimg">
+    <button type="button" >Change Image</button>
+
+    <script>
+        function changeImg() {
+            const appleimg=document.getElementById("appleimg");
+            appleimg.src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MT4J3_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1693594202786";
+        }
+    </script> -->
+
+    <h1>BULB TOGGLER</h1>
+    <div class="div-container">
+    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFivNEonedGChPF5Jr-BNx6Nq0FuI7nVCIai0AsmwrqA&s" id="offbulb" height="300px">
+        </div>
+
+    <!-- <img src="https://cdn-icons-png.flaticon.com/512/702/702797.png" alt="onbulb"> -->
+<br>
+
+    <button type="button" onclick="onbulb()">ON</button>
+    <button type="button" onclick="offbulb()">OFF</button>
+
+    <script>
+        function onbulb() {
+            const onimg=document.getElementById("offbulb");
+            onimg.src="https://cdn-icons-png.flaticon.com/512/702/702797.png";
+
+        }
+
+        function offbulb() {
+            const offbulb=document.getElementById("offbulb");
+            offbulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFivNEonedGChPF5Jr-BNx6Nq0FuI7nVCIai0AsmwrqA&s;"
+        }
+    </script>
+</body>
+
+</html>
